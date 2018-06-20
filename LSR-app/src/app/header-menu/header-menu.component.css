@@ -1,0 +1,46 @@
+
+
+header{
+    margin: 1%;
+    
+    
+}
+
+.logo{
+   
+    height:100px;
+    width: 200px;
+
+}
+.slogan{
+    color:#AAA;
+    border-color:#e1e1e1;
+    font-family: inherit;
+    font-size: 21px;
+    
+
+}
+.log{
+    margin-top: 2%;
+}
+.logout{
+    margin-right: 20px;
+}
+
+.logout:hover {
+    cursor: pointer;
+}
+.param:hover{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 991px) {
+    .welcome {
+      font-size: 20px;
+     
+    }
+    .log{
+        margin-left: 7%;
+    }
+  }

@@ -1,0 +1,69 @@
+<div id="menu" (click)="vertiMenu()">
+  <img src="../assets/menu.png">
+</div>
+
+<div class="row">
+  <div id="verticalMenu" class="vertical-menu">
+    <ul>
+      <li class="verti active">
+        Menu
+      </li>
+      <li class="verti">
+        <span (click)="goprofil()">Profil</span>
+      </li>
+      <li class="verti">
+        <span (click)="gogames()">jeux</span>
+      </li>
+      <li class="verti">
+        <span (click)="goaddgames()">ajouter un jeu</span>
+
+      </li>
+      <li class="verti">
+        <span (click)="goconsoles()">consoles</span>
+      </li>
+      <li class="verti">
+        <span (click)="goaddconsoles()">ajouter une console</span>
+      </li>
+
+
+
+    </ul>
+  </div>
+
+</div>
+<nav class="navbar navbar-expand-lg ">
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="btn ">
+        <span class="nav-link text-light " (click)="goprofil()">VOTRE PROFIL
+          <span class="sr-only">(current)</span>
+        </span>
+      </li>
+      <li class="btn ">
+        <span class="nav-link text-light " (click)="gogames()">LISTE DES JEUX
+          <span class="sr-only">(current)</span>
+        </span>
+      </li>
+      <li class="btn ">
+        <span class="nav-link text-light " (click)="goaddgames()">AJOUTER UN JEU
+          <span class="sr-only">(current)</span>
+        </span>
+      </li>
+      <li class="btn ">
+        <span class="nav-link text-light " (click)="goconsoles()">LISTE DES CONSOLES
+          <span class="sr-only">(current)</span>
+        </span>
+      </li>
+      <li class="btn ">
+        <span class="nav-link text-light " (click)="goaddconsoles()">AJOUTER UNE CONSOLE
+          <span class="sr-only">(current)</span>
+        </span>
+      </li>
+
+
+    </ul>
+
+  </div>
+</nav>

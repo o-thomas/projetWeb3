@@ -1,0 +1,47 @@
+<app-header-menu></app-header-menu>
+<app-nav></app-nav>
+<div class="row">
+  <div id="card" class="col-lg-4 offset-lg-4 card text-center">
+    <div class="card-body">
+      <h5 class="card-title">{{console.name}}</h5>
+      <div class="card-text">{{console.year}}</div>
+      <div col-1 class="image">
+        <img src={{console.picture}}>
+      </div>
+      <p class="card-text">{{console.fabricant}}</p>
+      <button (click)="displayForm()">modifier le jeu</button>
+    </div>
+  </div>
+  <div id="form" class=" offset-lg-1 col-lg-9 ">
+    <form method="POST">
+      <div class="form-group">
+        <label for="name">nom de la console</label>
+        <input [(ngModel)]="consoleUpdated.name" type="text" name="name" class="form-control" id="name">
+
+      </div>
+      <div class="form-group">
+        <label for="fabricant">quel support ?</label>
+        <select [(ngModel)]="consoleUpdated.fabricant" name="fabricant" id="fabricant" class="col-lg-6">
+
+          <option value="Sega">Sega</option>
+          <option value="Nintendo">Nintendo</option>
+          <option value="Atari">Atari</option>
+          <option value="Sony">Sony</option>
+
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="year">Année de commercialisation</label>
+        <input [(ngModel)]="consoleUpdated.year" type="number" name="year" class="form-control" id="year">
+      </div>
+      <div class="form-group">
+        <label for="picture">collé l'url de votre image</label>
+        <input [(ngModel)]="consoleUpdated.picture" type="text" name="picture" class="form-control" id="picture">
+      </div>
+
+
+      <button (click)="updateConsole()" class="btn btn-primary">Valider les changements</button>
+      <button (click)="removeConsole()" class="btn btn-primary">supprimer le jeu</button>
+    </form>
+  </div>

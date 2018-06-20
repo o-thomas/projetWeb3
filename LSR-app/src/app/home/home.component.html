@@ -1,0 +1,22 @@
+<app-header-menu></app-header-menu>
+<app-nav></app-nav>
+<div *ngIf="games">
+  <p>mes derniers jeux:</p>
+  <div class="row mt-5" *ngIf="games">
+
+    <div class="jeux col-md-3 offset-md-1  mb-3" *ngFor="let game of games" (click)="select(game._id)">
+
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">{{game.name}}</h5>
+          <img class="image" src={{game.picture}}>
+          <p class="card-text">{{game.description}}</p>
+          <p class ="card-text">{{game.editeur}}</p>
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+
+
+header{
+    margin: 1%;
+    border-bottom: solid 1px;
+    
+}
+
+.logo{
+   
+    height:100px;
+    width: 200px;
+
+}
+.slogan{
+    color:#AAA;
+    border-color:#e1e1e1;
+    font-family: inherit;
+    font-size: 21px;
+    
+
+}
+

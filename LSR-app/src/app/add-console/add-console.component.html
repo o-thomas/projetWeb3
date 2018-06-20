@@ -1,0 +1,34 @@
+<app-header-menu></app-header-menu>
+<app-nav></app-nav>
+<article class="addconsole col-lg-6" id="register">
+  <h1 >ajouter une console</h1>
+  <form class="form-add-console" method="POST">
+          <div class="nom-jeu row col-lg-12 field">
+                  <label for="nom" class = "label-nom  col-lg-6">nom</label>
+                  <input [(ngModel)]="addConsoleData.name" name ="nom" type ="text" id="nom" class ="col-lg-6">
+          </div>
+          <div class="description row col-lg-12 field">
+                  <label for="description" class = "label-description  col-lg-6">description</label>
+                  <input [(ngModel)]="addConsoleData.description" name ="description" type ="text" id="description" class ="col-lg-6">
+          </div>
+          <div class="console row col-lg-12 field">
+                <label for="constructor" class = "label-constructor  col-lg-6">console</label>
+                <select [(ngModel)]="addConsoleData.fabricant" name ="fabricant" id="constructor" class ="col-lg-6">
+      
+                                <option value="Sega">Sega</option>
+                                <option value="Nintendo">Nintendo</option>
+                                <option value="Atari">Atari</option>
+                                <option value="Sony">Sony</option>
+                                
+                        
+                        </select>
+        </div>
+        <div class="description row col-lg-12 field">
+                <label for="year" class = "label-year  col-lg-6">Année de commercialisation</label>
+                <input [(ngModel)]="addConsoleData.year" name ="year" type ="text" id="year" class ="col-lg-6">
+        </div>
+        <div class="image row col-lg-12 field">
+                <label for="picture" class="col-lg-6">Insérer l'url' de l'image</label>
+                <input [(ngModel)]="addConsoleData.picture" name ="picture" type ="text" id="picture" class ="col-lg-6">
+            </div>
+          <input type="button"(click)="addConsole()" value="Inscription"class="btn-co offset-2 btn-dark">

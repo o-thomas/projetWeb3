@@ -1,0 +1,49 @@
+<app-header>
+</app-header>
+<section class="container">
+        <div class="row">
+                <article class="login col-lg-6" id="login">
+                        <h1 class="title-co">Connexion</h1>
+                        <form class="form-log" method="POST">
+
+                                <div class="pass row col-12">
+                                        <label for="psw" class="label-pass col-lg-6 m-100">Pseudo</label>
+                                        <input [(ngModel)]="loginUserData.login" name="login" type="text" id="pseud" class="col-lg-6">
+                                </div>
+                                <div class="pass row col-12">
+                                        <label for="psw" class="label-pass col-lg-6 m-100">Mot de passe</label>
+                                        <input [(ngModel)]="loginUserData.password" name="password" type="password" id="password" class="col-lg-6">
+                                </div>
+                                <div class="row mt-5">
+                                        <input type="button" value="pas inscrit ?" id="act-insc" onclick="display_subscribe()" class="btn-co offset-1 mob-insc btn-dark">
+                                        <input (click)="loginUser()" type="button" value="connexion" class="btn-co offset-1  btn-dark">
+                                </div>
+                        </form>
+                </article>
+                <article class="register col-lg-6" id="register">
+                        <h1>Inscription</h1>
+                        <form class="form-insc" method="POST">
+                                
+                                <div class="name row col-lg-12 field">
+                                        <label for="name" class="label-name  col-lg-6">PSEUDO</label>
+                                        <input [(ngModel)]="registerUserData.login" name="login" type="text" id="login" class="col-lg-6">
+                                </div>
+                                
+                                <div class="mail row col-lg-12 field">
+                                        <label for="mail" class="label-mail  col-lg-6">EMAIL</label>
+                                        <input [(ngModel)]="registerUserData.mail" name="mail" type="text" id="mail" class="col-lg-6">
+                                </div>
+                                <div class="password row col-lg-12 field">
+                                        <label for="password" class="label-password  col-lg-6">MOT DE PASSE</label>
+                                        <input [(ngModel)]="registerUserData.password" name="password" type="text" id="password" class="col-lg-6">
+                                </div>
+                                
+                                
+                                <div class="row button">
+                                        <input type="button" value="deja inscrit ?" id="act-login" onclick="display_login()" class="offset-1 btn-co mob-insc btn-dark">
+                                        <input type="button" (click)="registerUser()" value="Inscription" class="btn-co offset-2 btn-dark">
+                                </div>
+                        </form>
+                </article>
+        </div>
+</section>

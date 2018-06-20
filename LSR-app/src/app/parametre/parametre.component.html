@@ -1,0 +1,24 @@
+<app-header-menu></app-header-menu>
+<app-nav></app-nav>
+
+<div id="remAccount">
+  <form method="POST">
+    <div class="pass row col-12">
+      <label for="psw" class="label-pass col-lg-6 m-100">Modifier Pseudo</label>
+      <input [(ngModel)]="updateUser.login" name="login" type="text" id="pseud" class="col-lg-6">
+    </div>
+    <div class="pass row col-12">
+      <label for="psw" class="label-pass col-lg-6 m-100">Modifié mot de passe</label>
+      <input [(ngModel)]="updateUser.password" name="password" type="password" id="password" class="col-lg-6">
+    </div>
+    <div class="pass row col-12">
+      <label for="mail" class="label-pass col-lg-6 m-100">Modifié Mail</label>
+      <input [(ngModel)]="updateUser.mail" name="mail" type="password" id="password" class="col-lg-6">
+    </div>
+    <div class="row mt-5">
+      <input type="button" value="modifier votre compte" id="act-insc" (click)="update()" class="btn-co offset-1 mob-insc btn-dark">
+    </div>
+  </form>
+  <input type="button" value="supprimer votre compte" id="act-insc" (click)="remove()" class="btn-co offset-8 mob-insc btn-dark">
+
+</div>

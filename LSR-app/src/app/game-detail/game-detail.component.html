@@ -1,0 +1,42 @@
+<app-header-menu></app-header-menu>
+<app-nav></app-nav>
+<div class="row">
+  <div id="card" class="col-lg-4 offset-lg-4 card text-center">
+    <div class="card-body">
+      <h5 class="card-title">{{game.name}}</h5>
+      <div class="card-text">{{game.console}}</div>
+      <div col-1 class="image">
+        <img src={{game.picture}}>
+      </div>
+      <p class="card-text">{{game.description}}</p>
+      <button (click)="displayForm()">modifier le jeu</button>
+    </div>
+  </div>
+  <div id="form" class=" offset-lg-1 col-lg-9 ">
+    <form method="POST">
+      <div class="form-group">
+        <label for="name">nom du jeu</label>
+        <input [(ngModel)]="gameUpdated.name" type="text" name="name" class="form-control" id="name">
+
+      </div>
+      <div class="form-group">
+        <label for="console">quel support ?</label>
+        <input [(ngModel)]="gameUpdated.console" type="text" name="console" class="form-control" id="console">
+      </div>
+      <div class="form-group">
+        <label for="description">description du jeu</label>
+        <input [(ngModel)]="gameUpdated.description" type="text" name="description" class="form-control" id="description">
+      </div>
+      <div class="form-group">
+        <label for="editeur">editeur du jeu</label>
+        <input [(ngModel)]="gameUpdated.editeur" type="text" name="editeur" class="form-control" id="editeur">
+      </div>
+      <div class="form-group">
+        <label for="image">coller le lien de votre image</label>
+        <input [(ngModel)]="gameUpdated.picture" type="text" name="image" class="form-control" id="image">
+      </div>
+
+      <button (click)="updateGame()" class="btn btn-primary">Valider les changements</button>
+      <button (click)="removeGame()" class="btn btn-primary">supprimer le jeu</button>
+    </form>
+  </div>

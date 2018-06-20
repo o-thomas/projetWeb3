@@ -1,0 +1,38 @@
+<app-header-menu></app-header-menu>
+<app-nav></app-nav>
+
+<a href="./addconsole" class="btn btn-dark bouton">Ajouter une console</a>
+<form method="POST">
+  <label for="console" class="col-lg-6">filtrer par fabricant</label>
+  <select [(ngModel)]="filterByConstructor" name="console" id="console" class="col-lg-6">
+    <option value="Sega">Sega</option>
+    <option value="Nintendo">Nintendo</option>
+    <option value="Atari">Atari</option>
+    <option value="Sony">Sony</option>
+
+  </select>
+  <label for="gender" class="label-name col-lg-6">filtrer par année</label>
+  <input type="text" [(ngModel)]="filterByYear" name="year" id="year" class="col-lg-6">
+
+  <input type="button" (click)="getConsoleByYearConstructor()">
+
+
+</form>
+<div class="row mt-5" *ngIf="consoles">
+  <div class="col-md-4 mb-3" *ngFor="let console of consoles">
+    <div class="card text-center" (click)="select(console._id)">
+      <div class="card-body">
+        <h5 class="card-title">{{console.name}}</h5>
+        <div class="image">
+          <img class="image" src={{console.picture}}>
+        </div>
+        <p class="card-text">{{console.fabricant}}</p>
+        <p class="card-text">{{console.year}}</p>
+
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<app-header-menu></app-header-menu>
+<app-nav></app-nav>
+<div class="row mt-5" *ngIf="consoles"></div>
+<a href="./add-game" class="btn btn-dark bouton">Ajouter un jeu</a>
+<form method="POST">
+  <label for="console" class="col-lg-6">filtrer par console</label>
+  <select [(ngModel)]="filterByConsole" name="console" id="console" class="col-lg-6">
+    <option value="">choisir une console</option>
+    <option value="MegaDrive">MegaDrive</option>
+    <option value="Snes">Snes</option>
+    <option value="nes">nes</option>
+    <option value="pc">Pc</option>
+    <option value="MasterSystem">MasterSystem</option>
+    <option value="Nintendo64">Nintendo 64</option>
+
+  </select>
+  <label for="gender" class="label-name col-lg-6">filtrer par nom</label>
+  <input [(ngModel)]="filterByName" name="name" id="name" class="col-lg-6">
+
+  <input type="button" (click)="getGameByConsoleName()">
+
+
+</form>
+<div class="row mt-5" *ngIf="games">
+  <div class="col-md-4 mb-3" *ngFor="let game of games">
+    <div class="card text-center"(click)="select(game._id)">
+      <div class="card-body">
+        <h5 class="card-title">{{game.name}}</h5>
+        <div class="image">
+          <img class="image" src={{game.picture}}>
+        </div>
+        <p class="card-text">{{game.description}}</p>
+
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

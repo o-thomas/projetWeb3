@@ -1,0 +1,85 @@
+
+
+.title-co{
+    
+    margin-bottom: 8%;
+}
+h1{
+    text-align: center;
+    font-size:30px;
+    margin-bottom: 5%;
+}
+
+
+.form-log{
+    
+    
+    
+}
+
+.label-log{
+    
+    
+    font-size: 26px;
+}
+
+.label-log{
+    margin-top:50%;
+}
+.label-pass{
+   
+    font-size: 26px; 
+   
+}
+
+.button,.btn-co{
+height: 60px;
+margin-top: 5%;
+
+}
+.btn,.btn-co{
+    border-radius: 10px;
+background-color:black;
+
+}
+
+.pseudo{
+    margin-bottom: 5%;
+}
+
+
+ .register{
+     border-left: 1px solid;
+ }
+
+ .form-insc{
+     margin-bottom: 5%;
+ }
+
+ .field{
+     margin-bottom: 2%;
+ }
+ .mob-insc{
+     display: none;
+ }
+ .btn-co{
+ margin-top:8%;
+ }
+
+
+
+ @media screen and (min-width: 200px) and (max-width: 1000px) {
+    .mob-insc {
+      display: unset;
+    }
+    .register{
+        display: none;
+    }
+    .form-log{
+     margin-top: 5%;
+    }
+    h1{
+        font-size:25px;
+    }
+    
+  }

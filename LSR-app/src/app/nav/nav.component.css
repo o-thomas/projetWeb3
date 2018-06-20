@@ -1,0 +1,64 @@
+nav{
+    padding: 0%;
+    background-color:black;
+}
+li{
+    list-style-type:none;
+}
+
+span {
+    color:white;
+    
+    height: 100%;
+}
+
+#menu{
+    display: none
+}
+#menu img{
+    width: 40px;
+    height: 40px;
+}
+ul{
+    align-content: center;
+}
+
+.vertical-menu {
+    background: black;
+    display:none;
+    width: 150px;
+}
+
+.verti {
+    border-bottom: solid;
+    border-color:white;
+    text-align: center;
+    border-width:1px;
+    margin-right:20px;
+    
+}
+
+.vertical-menu a {
+    
+    color: white;
+    
+   
+    text-decoration: none;
+}
+
+.vertical-menu li:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu .active {
+    background-color:white;
+    color: black;
+}
+
+
+@media screen and (max-width: 991px) {
+    #menu {
+      display:unset;
+     
+    }
+  }
